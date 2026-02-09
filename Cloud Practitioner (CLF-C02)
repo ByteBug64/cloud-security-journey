@@ -1,0 +1,99 @@
+Cloud Foundations Portfolio 
+AWS Certified Cloud Practitioner (CLF-C02)
+Course: Ultimate AWS Certified Cloud Practitioner (CLF-C02)
+Instructor: Stephane Maarek
+Platform: Udemy
+Status: ✅ Completed (January 2026)
+Focus: AWS Fundamentals, Cloud Security, and Cloud Architecture
+
+1.Summary
+This document serves as a technical portfolio for the AWS Certified Cloud Practitioner (CLF-C02) certification. 
+It demonstrates a strong foundational understanding of the AWS Cloud ecosystem, with a learning focus intentionally 
+aligned toward an eventual specialization in Cloud Security Engineering.The coursework covered AWS global infrastructure, 
+the Shared Responsibility Model, and core AWS services required to design secure, scalable, highly available, and fault-tolerant cloud solutions.
+
+2. Hands-On Projects
+Applied knowledge demonstrating practical cloud and security skills.
+Project 1: Secure S3 Static Website
+Objective:
+Deploy a cost-effective and highly available static website using Amazon S3 while enforcing strong security controls.
+Architecture:
+Configured an Amazon S3 bucket for static website hosting
+Used AWS-managed infrastructure to eliminate server management overhead
+Security Implementation
+Disabled Block Public Access only at the bucket policy level
+Maintained account-level public access protections
+Implemented a custom JSON bucket policy allowing GetObject access strictly for public website content
+Outcome:
+Successfully hosted a live static website endpoint with low latency, minimal cost, and zero server administration.
+
+3. Core Competencies and Technical Deep Dive
+A. Identity and Access Management (IAM) & Security
+Focus: Secure access control – the “front door” to AWS.
+Managed IAM Users, Groups, and Roles
+Enforced Multi-Factor Authentication (MFA) on root and IAM users
+Applied the Principle of Least Privilege using JSON policies
+Distinguished IAM Access Keys (CLI/API access) from console credentials
+Implemented password rotation and complexity policies for compliance
+
+B. AWS Compute Services
+Amazon EC2 (Elastic Compute Cloud)
+Understanding instance families:
+General Purpose (T3, M5)
+Compute Optimized (C5)
+Memory Optimized (R5)
+Used EC2 User Data to bootstrap instances with shell scripts
+Configured Security Groups to allow SSH (Port 22) and HTTP (Port 80) traffic
+High Availability & Scalability
+Elastic Load Balancing (ELB) for traffic distribution
+Auto Scaling Groups (ASG) for dynamic scaling based on CPU utilization
+Serverless & Containers
+AWS Lambda for event-driven, serverless execution
+Amazon ECS and AWS Fargate for containerized workloads (Docker fundamentals)
+
+C. Storage and Databases
+Amazon S3 (Simple Storage Service)
+Knowledge of storage classes:
+S3 Standard
+S3 Intelligent-Tiering
+S3 Standard-IA
+Amazon Glacier for archival storage
+Enabled versioning to protect against accidental deletion
+Amazon EBS (Elastic Block Store)
+Attached persistent block storage to EC2 instances
+Created snapshots for backup and disaster recovery
+Databases
+Amazon RDS for managed relational databases (MySQL, PostgreSQL, MariaDB)
+Amazon DynamoDB for high-performance NoSQL key-value workloads
+
+D. Networking and Content Delivery
+Designed networks using Amazon VPC
+Implemented Public and Private Subnets
+Used NAT Gateways for secure outbound internet access from private subnets
+Managed DNS using Amazon Route 53 (Simple, Weighted, Failover routing)
+Leveraged Amazon CloudFront CDN to reduce latency for global users
+
+E. Cloud Security, Compliance, and Governance
+Shared Responsibility Model
+AWS: Security of the cloud (physical infrastructure)
+Customer: Security in the cloud (data, IAM, OS, configurations)
+DDoS Protection
+AWS Shield Standard (automatic protection)
+AWS Shield Advanced (enhanced protection for critical workloads)
+Compliance & Encryption
+Used AWS Artifact to access compliance reports (ISO, PCI-DSS)
+Understood AWS KMS for encryption at rest and in transit
+
+4. Operational Excellence and Billing
+AWS CloudTrail for auditing and governance (“who did what and when”)
+Amazon CloudWatch for monitoring metrics and setting alarms
+AWS Budgets to prevent unexpected spending
+AWS Cost Explorer to analyze usage and optimize costs
+
+5. Future Roadmap
+AWS Certified Solutions Architect – Associate (SAA-C03)
+
+Author:
+ByteBug
+Aspiring Cloud Security Engineer
+Cybersecurity Enthusiast
