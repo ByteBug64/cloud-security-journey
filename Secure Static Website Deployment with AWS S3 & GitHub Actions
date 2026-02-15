@@ -1,0 +1,154 @@
+📦 Secure Static Website Deployment with AWS S3 & GitHub Actions
+📌 Project Overview
+
+This project demonstrates how to deploy a static website to Amazon S3 using GitHub Actions (CI/CD).
+The goal is to automate deployment while applying AWS security best practices at a Cloud Practitioner level.
+
+🎯 Project Objectives
+
+Automate static website deployment using GitHub Actions
+
+Use AWS IAM with least-privilege access
+
+Understand real-world AWS ↔ GitHub integration
+
+Practice secure cloud deployment fundamentals
+
+🛠️ Technologies Used
+
+GitHub Actions – CI/CD automation
+
+Amazon S3 – Static website hosting
+
+AWS IAM – Access control and permissions
+
+AWS CLI – Deployment via aws s3 sync
+
+🏗️ Architecture (Simple)
+Developer → GitHub → GitHub Actions → AWS S3
+
+
+Code is pushed to GitHub
+
+GitHub Actions runs automatically
+
+Files are synced to an S3 bucket
+
+⚙️ Deployment Workflow
+
+Push code to the main branch
+
+GitHub Actions workflow triggers
+
+AWS credentials are loaded from GitHub Secrets
+
+Website files are synced to S3 using:
+
+aws s3 sync . s3://<bucket-name>
+
+🔐 Security Considerations
+
+AWS credentials stored securely using GitHub Secrets
+
+IAM user configured with least-privilege policy
+
+No hardcoded AWS credentials in the repository
+
+Access keys rotated after exposure detection
+
+📁 Repository Structure
+.
+├── index.html
+├── styles.css
+├── script.js
+└── .github/
+    └── workflows/
+        └── deploy.yml
+
+🚀 Outcome
+
+Successfully deployed a static website to AWS S3
+
+Implemented CI/CD using GitHub Actions
+
+Gained hands-on experience debugging real AWS IAM and S3 permission issues
+
+🧠 Skills Demonstrated
+
+Cloud fundamentals (AWS)
+
+IAM permissions & security
+
+CI/CD pipelines
+
+Troubleshooting cloud deployment errors
+
+
+🔧 Challenges & Debugging (GitHub ↔ AWS)
+
+During this project, I encountered multiple issues while integrating GitHub Actions with Amazon S3 for automated deployment. 
+Below are the key problems and how they were resolved.
+
+1️⃣ GitHub Actions – AWS Credentials Not Loading
+
+Error:
+
+Credentials could not be loaded from any providers
+
+
+Cause:
+
+AWS credentials were:
+
+Misformatted in GitHub Secrets, or
+
+Previously exposed and automatically quarantined by AWS
+
+Resolution:
+
+Created a new IAM access key
+
+Stored credentials correctly in GitHub Repository Secrets:
+
+AWS_ACCESS_KEY_ID
+
+AWS_SECRET_ACCESS_KEY
+
+Removed the compromised key
+
+2️⃣ S3 AccessDenied (ListObjectsV2)
+
+Error:
+
+AccessDenied: not authorized to perform s3:ListBucket
+
+
+Cause:
+
+IAM user lacked proper S3 permissions
+
+Bucket name in the IAM policy did not match the actual S3 bucket
+
+Resolution:
+
+Attached a least-privilege IAM policy allowing:
+
+s3:ListBucket
+
+s3:GetObject
+
+s3:PutObject
+
+s3:DeleteObject
+
+Ensured the policy referenced the exact bucket name
+
+📘 Key Lessons Learned
+
+IAM explicit deny overrides allow
+
+GitHub Secrets must use the NAME = VALUE format
+
+Least-privilege IAM policies are critical for secure deployments
+
+Small misconfigurations can break CI/CD pipelines
