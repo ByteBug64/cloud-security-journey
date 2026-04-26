@@ -47,7 +47,7 @@ cloud-security-journey/
 
 | Certification | Provider | Status |
 |---------------|----------|--------|
-| AWS Certified Cloud Practitioner (CLF-C02) | AWS | ✅ Completed Jan 2026 |
+| AWS Certified Cloud Practitioner (CLF-C02) | AWS | ✅ Completed Feb 2026 |
 | AWS Security Specialty | AWS | 🔜 In Progress |
 
 ---
@@ -64,7 +64,7 @@ cloud-security-journey/
 
 ## 🛠️ Tools & Services
 
-`Python` `Boto3` `AWS IAM` `AWS S3` `AWS CloudTrail` `AWS GuardDuty`
+`Python` `Bash` `Boto3` `AWS IAM` `AWS S3` `AWS CloudTrail` `AWS GuardDuty`
 `AWS Security Hub` `AWS KMS` `Amazon Bedrock` `CloudFront` `Terraform` `GitHub Actions`
 
 ---
