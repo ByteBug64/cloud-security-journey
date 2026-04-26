@@ -32,4 +32,3 @@ This tool is for a Cloud Security engineer who wants to make his work easier, ac
 
 This tool is for authorized use only.
 Only run it against AWS accounts you own or have permission to scan.
-Thanks
