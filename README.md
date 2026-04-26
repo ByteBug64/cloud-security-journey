@@ -6,7 +6,7 @@
 
 ## 👤 About Me
 
-Aspiring Cloud Security Engineer focused on the **Blue Team** — detection, response, and defense of cloud infrastructure. This repository tracks every project, certification, and tool I build along the way.
+Aspiring Cloud Security Engineer focused on the **Blue Team** detection, response, and defense of cloud infrastructure. This repository tracks every project, certification, and tool I build along the way.
 
 ---
 
