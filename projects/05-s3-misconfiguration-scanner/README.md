@@ -1,61 +1,35 @@
-# 05 — S3 Misconfiguration Scanner
+# S3 Bucket Misconfiguration Scanner
 
-**Stack:** Python · Boto3 · AWS S3
-**Status:** ✅ Complete
+## What does this tool do?
 
----
+This tool is used to Scan S3 Bucket Misconfiguration and check vulnerability
 
-## Overview
+## What does it check for?
 
-Scans all S3 buckets in an AWS account and reports any that are publicly exposed, missing encryption, or have overly permissive bucket policies. Misconfigured S3 buckets are one of the leading causes of cloud data breaches — this tool helps prevent that.
+This tool checks for misconfiguration in acl, bucket policy, encryption, logging, public_access and versioning
 
----
+## Who is it for?
 
-## What It Scans
+This tool is for a Cloud Security engineer who wants to make his work easier, accurate and avoid manual operation in aws console
 
-| Check | Risk if Failed |
-|-------|----------------|
-| Public access block settings | Data exposed to the internet |
-| Bucket ACL permissions | Unauthorized access to objects |
-| Server-side encryption | Data readable if storage is compromised |
-| Bucket policy scope | Overly broad access grants |
+## Installation
 
----
+1. Clone or download the project
+2. Create a virtual environment
+3. Activate it
+4. Install dependencies with `pip install -r requirements.txt`
+5. Configure AWS credentials with `aws configure`
 
-## How to Use
+## Usage
 
-```bash
-# Install dependencies
-pip install boto3
+1. `python scanner.py`
+2. `python scanner.py --output html`
+3. `python scanner.py --bucket my-bucket`
+4. `python scanner.py --output both`
+5. `python scanner.py --output terminal`
 
-# Configure AWS credentials
-aws configure
+## Disclaimer
 
-# Run the scanner
-python s3_scanner.py
-```
-
-## Sample Output
-
-```
-[CRITICAL] my-bucket-1 — Public access block is DISABLED
-[WARNING]  my-bucket-2 — Encryption is NOT enabled
-[OK]       my-bucket-3 — No issues found
-```
-
----
-
-## Key Learnings
-
-- Most real-world cloud breaches trace back to misconfigurations, not sophisticated exploits
-- S3 has multiple overlapping access controls — all must be checked
-- Automated scanning beats manual reviews every time
-
----
-
-## Files
-
-| File | Description |
-|------|-------------|
-| `s3_scanner.py` | Main script |
-| `README.md` | This file |
+This tool is for authorized use only.
+Only run it against AWS accounts you own or have permission to scan.
+Thanks
