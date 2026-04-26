@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S3 Security Report</title>
+  </head>
+  <body>
+    <h1>S3 Bucket Security Report</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Bucket Name</th>
+          <th>Check</th>
+          <th>Status</th>
+          <th>Issues</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for result in results %} {% for finding in result.findings %}
+        <tr>
+          <td>{{ result.bucket }}</td>
+          <td>{{ finding.check }}</td>
+          <td>{{ finding.status }}</td>
+          <td>{{ finding.issues }}</td>
+        </tr>
+        {%endfor %} {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
