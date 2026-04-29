@@ -25,7 +25,7 @@
 - Cloud forensics
 - Zero Trust architecture
 
-## Stage 5 — Expert (Ongoing)
+## Stage 5 — Expert
 - Custom threat detection rules
 - Full IR simulations with post-mortems
 - Open source contributions
