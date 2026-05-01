@@ -1,4 +1,4 @@
-# Cloud Security Engineer Roadmap (Blue Team)
+# Cloud Security Engineer Roadmap
 
 ## Stage 1 — Foundation ✅
 - Networking basics (TCP/IP, DNS, HTTP/S, firewalls)
