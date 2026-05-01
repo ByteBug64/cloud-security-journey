@@ -12,7 +12,7 @@
 - Encryption at rest vs in transit
 - **Cert:** AWS Cloud Practitioner (CLF-C02) ✅ Jan 2026
 
-## Stage 3 — Blue Team Core 🔄
+## Stage 3 — CyberSecurity 🔄
 - SIEM & Log Analysis (Splunk / Microsoft Sentinel)
 - MITRE ATT&CK framework
 - Incident Response playbooks
